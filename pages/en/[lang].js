@@ -19,7 +19,8 @@ export default function LangPage() {
       <h1>
         <Link href="/">
           <a>
-            usePairs() <img src="/bird.png" />
+            usePairs(
+            <img src="/bird.png" />)
           </a>
         </Link>
       </h1>
