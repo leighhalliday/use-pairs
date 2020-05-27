@@ -55,14 +55,10 @@ a {
   display: flex;
 }
 
-.language {
-  max-width: 400px;
-  padding-right: 1rem;
-}
-
 .voices {
   display: flex;
   flex-wrap: wrap;
+  padding-right: 1rem;
 }
 
 .choices {

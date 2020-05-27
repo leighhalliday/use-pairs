@@ -28,7 +28,7 @@ export default function Game({ pairs, langA, langB }) {
       );
       setLangBVoices(filteredB);
       setLangBVoice(random(filteredB));
-    }, 1000);
+    }, 100);
   }, []);
 
   React.useEffect(() => {
@@ -94,49 +94,40 @@ export default function Game({ pairs, langA, langB }) {
     <>
       <h2>Choose your accent</h2>
       <div className="languages">
-        <div className="language">
-          <ul className="voices">
-            <li>{langA.name}:</li>
-            {langAVoices.map((voice) => (
-              <li key={voice.name}>
-                <button
-                  onClick={() => {
-                    setLangAVoice(voice);
-                  }}
-                  className={
-                    langAVoice && langAVoice.name === voice.name
-                      ? "selected"
-                      : ""
-                  }
-                >
-                  {voice.name}
-                </button>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <div className="language">
-          <ul className="voices">
-            <li>{langB.name}:</li>
-            {langBVoices.map((voice) => (
-              <li key={voice.name}>
-                <button
-                  onClick={() => {
-                    setLangBVoice(voice);
-                  }}
-                  className={
-                    langBVoice && langBVoice.name === voice.name
-                      ? "selected"
-                      : ""
-                  }
-                >
-                  {voice.name}
-                </button>
-              </li>
-            ))}
-          </ul>
-        </div>
+        <ul className="voices">
+          <li>{langA.name}:</li>
+          {langAVoices.map((voice) => (
+            <li key={voice.name}>
+              <button
+                onClick={() => {
+                  setLangAVoice(voice);
+                }}
+                className={
+                  langAVoice && langAVoice.name === voice.name ? "selected" : ""
+                }
+              >
+                {voice.name}
+              </button>
+            </li>
+          ))}
+        </ul>
+        <ul className="voices">
+          <li>{langB.name}:</li>
+          {langBVoices.map((voice) => (
+            <li key={voice.name}>
+              <button
+                onClick={() => {
+                  setLangBVoice(voice);
+                }}
+                className={
+                  langBVoice && langBVoice.name === voice.name ? "selected" : ""
+                }
+              >
+                {voice.name}
+              </button>
+            </li>
+          ))}
+        </ul>
       </div>
 
       <h2>Choose the pairs</h2>
