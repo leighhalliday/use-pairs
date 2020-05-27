@@ -139,7 +139,9 @@ export default function Game({ pairs, langA, langB }) {
               onClick={() => {
                 choose(choice);
               }}
-              className={current && current === choice.value ? "selected" : ""}
+              className={
+                current && current.value === choice.value ? "selected" : ""
+              }
               disabled={!!selected[choice.value]}
             >
               {choice.value}
