@@ -21,13 +21,13 @@ export default function Game({ pairs, langA, langB }) {
         (voice) => voice.lang.substr(0, 2) === langA.code
       );
       setLangAVoices(filteredA);
-      setLangAVoice(filteredA[0]);
+      setLangAVoice(random(filteredA));
 
       const filteredB = voices.filter(
         (voice) => voice.lang.substr(0, 2) === langB.code
       );
       setLangBVoices(filteredB);
-      setLangBVoice(filteredB[0]);
+      setLangBVoice(random(filteredB));
     }, 200);
   }, []);
 
