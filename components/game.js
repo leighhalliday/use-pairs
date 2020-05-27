@@ -28,7 +28,7 @@ export default function Game({ pairs, langA, langB }) {
       );
       setLangBVoices(filteredB);
       setLangBVoice(random(filteredB));
-    }, 200);
+    }, 1000);
   }, []);
 
   React.useEffect(() => {
